@@ -1,183 +1,512 @@
-<!DOCTYPE HTML>
-<!--
-	Insta Setup by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Insta Setup</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Insta Setup</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Get registration and chartered services for your business instantly" />
+        <meta name="keywords" content="inclined, skew, sloping, html5, slopy, css3, web design, elements, div, section, background, rotate, transform" />
+        <meta name="author" content="Corédox" />
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <style>
+          .menu {
+          	line-height: 1;
+          	margin: 0 auto 3em;
+          }
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+          .menu__list {
+          	position: relative;
+          	display: -webkit-flex;
+          	display: flex;
+          	-webkit-flex-wrap: wrap;
+          	flex-wrap: wrap;
+          	margin: 0;
+          	padding: 0;
+          	list-style: none;
+          }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Insta Setup</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+          .menu__item {
+          	display: block;
+          	margin: 1em 0;
+          }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+          .menu__link {
+          	font-size: 1.05em;
+          	font-weight: bold;
+          	display: block;
+          	padding: 1em;
+          	cursor: pointer;
+          	-webkit-user-select: none;
+          	-moz-user-select: none;
+          	-ms-user-select: none;
+          	user-select: none;
+          	-webkit-touch-callout: none;
+          	-khtml-user-select: none;
+          	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          }
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon fa-diamond"></span></div>
-							<h2>This is Insta Setup</h2>
-							<p>Register Company + Register Trademark + CA Services in India</p>
-						</div>
-					</section>
+          .menu__link:hover,
+          .menu__link:focus {
+          	outline: none;
+          }
+          .menu--sebastian .menu__link {
+          	position: relative;
+          	display: block;
+          	margin: 0 1em;
+          	text-align: center;
+          	color: #929292;
+          	-webkit-transition: color 0.4s;
+          	transition: color 0.4s;
+          }
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+          .menu--sebastian .menu__link:hover,
+          .menu--sebastian .menu__link:focus {
+          	color: #fff;
+          }
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Register One Person Company</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
+          .menu--sebastian .menu__item--current .menu__link {
+          	color: #d94f5c;
+          }
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Register Private Limited Company</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
+          .menu--sebastian .menu__link::before,
+          .menu--sebastian .menu__link::after {
+          	content: '';
+          	position: absolute;
+          	left: 0;
+          	width: 100%;
+          	height: 2px;
+          	background: #d94f5c;
+          	-webkit-transform: scale3d(0, 1, 1);
+          	transform: scale3d(0, 1, 1);
+          	-webkit-transition: -webkit-transform 0.2s;
+          	transition: transform 0.2s;
+          }
 
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Register Limited Liability Partnership</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
+          .menu--sebastian .menu__link::before {
+          	top: 0;
+          	-webkit-transform-origin: 0 50%;
+          	transform-origin: 0 50%;
+          }
 
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Chartered Accountant Services</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
-									<ul class="actions">
-										<li><a href="#" class="button">Browse All</a></li>
-									</ul>
-								</div>
-							</section>
+          .menu--sebastian .menu__link::after {
+          	bottom: 0;
+          	-webkit-transform-origin: 100% 50%;
+          	transform-origin: 100% 50%;
+          }
 
-					</section>
+          .menu--sebastian .menu__item--current .menu__link::before,
+          .menu--sebastian .menu__item--current .menu__link::after {
+          	-webkit-transform: scale3d(1, 1, 1);
+          	transform: scale3d(1, 1, 1);
+          	-webkit-transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+          	transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+          	-webkit-transition-duration: 0.4s;
+          	transition-duration: 0.4s;
+          }
+          @media screen and (max-width:55em) {
+          	.menu__list {
+          		display: block;
+          		margin: 0 auto;
+          	}
+          }
+        </style>
+        <style>
+          .pricing {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto 3em;
+          }
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="4"></textarea>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="fa-home">
-									Mayank Mittal<br />
-									B-10,Raja Garden<br />
-									NewDelhi-110015
-								</li>
-								<li class="fa-phone">+91 99994 49411</li>
-								<li class="fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Insta Setup. All rights reserved.</li><li>Created with <i class="fa-heart"></i> by <a href="http://coredox.github.io">Team Coredox</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+          .pricing__item {
+            position: relative;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-align-items: stretch;
+            align-items: stretch;
+            text-align: center;
+            -webkit-flex: 0 1 330px;
+            flex: 0 1 330px;
+          }
 
-			</div>
+          .pricing__feature-list {
+            text-align: left;
+          }
 
-		<!-- Scripts -->
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+          .pricing__action {
+            color: inherit;
+            border: none;
+            background: none;
+          }
 
-	</body>
+          .pricing__action:focus {
+            outline: none;
+          }
+
+          .pricing--yonten .pricing__item {
+          	font-family: 'PT Sans', sans-serif;
+          	padding: 2em 4em;
+          	cursor: default;
+          	color: #fff;
+          	margin: 1em;
+          	border: 1px solid #5c6552;
+          	max-width: 320px;
+          }
+
+          @media screen and (min-width: 66.250em) {
+          	.pricing--yonten .pricing__item {
+          		margin: 0;
+          	}
+          	.pricing--yonten .pricing__item:nth-child(2) {
+          		border-right: none;
+          		border-left: none;
+          	}
+          }
+
+          .pricing--yonten .pricing__item:hover {
+          	z-index: 100;
+          }
+
+          .pricing--yonten .pricing__item:hover::after {
+          	content: '';
+          	pointer-events: none;
+          	position: absolute;
+          	top: -5px;
+          	left: -5px;
+          	width: 100%;
+          	height: 100%;
+          	box-sizing: content-box;
+          	border: 5px solid #8bc34a;
+          }
+
+          .pricing--yonten .pricing__title {
+          	font-size: 1.5em;
+          	margin: 0 0 0.5em 0;
+          	padding: 0 0 0.5em;
+          }
+
+          .pricing--yonten .icon {
+          	font-size: 3em;
+          	margin: 0 0 0.5em 0;
+          	color: #85c34a;
+          }
+
+          .pricing--yonten .pricing__price {
+          	font-size: 2em;
+          	margin: 0 0 0.5em 0;
+          	font-weight: bold;
+          	color: #85c34a;
+          }
+
+          .pricing--yonten .pricing__currency {
+          	font-size: 0.5em;
+          	vertical-align: super;
+          }
+
+          .pricing--yonten .pricing__period {
+          	font-size: 0.35em;
+          	padding: 0 0 0 0.5em;
+          	color: #646D5B;
+          }
+
+          .pricing--yonten .pricing__feature-list {
+          	margin: 0;
+          	padding: 0.25em 0 8em;
+          	list-style: none;
+          	text-align: center;
+          	color: #81867D;
+          }
+
+          .pricing--yonten .pricing__feature {
+          	padding: 0.25em;
+          }
+
+          .pricing--yonten .pricing__action {
+          	font-weight: bold;
+          	margin-top: auto;
+          	padding: 1em 2em;
+          	border-radius: 40px;
+          	background: #85c34a;
+          	color: ;
+          	-webkit-transition: background-color 0.3s, color 0.3s;
+          	transition: background-color 0.3s, color 0.3s;
+          }
+
+          .pricing--yonten .pricing__action:hover,
+          .pricing--yonten .pricing__action:focus {
+          	color: #85c34a;
+          	background: #fff;
+          }
+
+          /* tashi */
+          .pricing--tashi .pricing__item {
+          	font-family: 'Roboto Condensed', sans-serif;
+          	margin: 0.5em;
+          	padding: 2em 2.5em;
+          	text-align: left;
+          	color: #fff;
+          	background: #262c37;
+          }
+
+          .pricing--tashi .pricing__title {
+          	font-size: 2em;
+          	font-weight: 300;
+          	margin: 0 0 0.15em;
+          	color: #E25A77;
+          }
+
+          .pricing--tashi .pricing__item:nth-child(2) .pricing__title {
+          	color: #E25ABC;
+          }
+
+          .pricing--tashi .pricing__item:nth-child(3) .pricing__title {
+          	color: #7E5AE2;
+          }
+
+          .pricing--tashi .pricing__price {
+          	font-size: 3em;
+          	font-weight: 300;
+          	padding: 0.85em 0;
+          }
+
+          .pricing--tashi .pricing__currency {
+          	font-size: 0.65em;
+          	vertical-align: super;
+          	color: #394150;
+          }
+
+          .pricing--tashi .pricing__period {
+          	font-size: 0.35em;
+          	padding: 0 0 0 0.5em;
+          	color: #535965;
+          }
+
+          .pricing--tashi .pricing__sentence {
+          	padding: 0 0 0.5em;
+          	margin: 0;
+          	color: #535965;
+          }
+
+          .pricing--tashi .pricing__feature-list {
+          	font-size: 0.95em;
+          	margin: 0;
+          	padding: 0 0 2.5em;
+          	list-style: none;
+          	color: #757983;
+          }
+
+          .pricing--tashi .pricing__feature {
+          	position: relative;
+          	display: block;
+          	padding: 0 0 0 20px;
+          	line-height: 1.5;
+          }
+
+          .pricing--tashi .pricing__feature::before {
+          	content: '';
+          	position: absolute;
+          	width: 10px;
+          	height: 2px;
+          	background: #1F242D;
+          	left: 0;
+          	top: 50%;
+          	margin: -2px 0 0 0;
+          }
+
+          .pricing--tashi .pricing__action {
+          	-webkit-align-self: flex-end;
+          	align-self: flex-end;
+          	margin-top: auto;
+          	font-size: 1.55em;
+          	width: 60px;
+          	height: 60px;
+          	line-height: 60px;
+          	color: #fff;
+          	border-radius: 30px;
+          	background: #E25A77;
+          	-webkit-transition: background-color 0.3s, color 0.3s;
+          	transition: background-color 0.3s, color 0.3s;
+          }
+
+          .pricing--tashi .pricing__item:nth-child(2) .pricing__action {
+          	background: #E25ABC;
+          }
+
+          .pricing--tashi .pricing__item:nth-child(3) .pricing__action {
+          	background: #7E5AE2;
+          }
+
+          .pricing--tashi .pricing__action:hover,
+          .pricing--tashi .pricing__action:focus {
+          	background: #1A1F28 !important;
+          }</style>
+		<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css' />
+		<script src="js/modernizr.custom.34978.js"></script>
+    </head>
+    <body>
+        <div class="container">
+			<header>
+        <h1 style="font-family:Comic Sans MS, cursive, sans-serif;">Insta Setup</h1>
+
+        <nav class="menu menu--sebastian">
+          <ul class="menu__list">
+            <li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Registrations</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Chartered Services</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Support</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+          </ul>
+        </nav>
+
+				<p class="codrops-demos" style="font-size: 400%; font-family:Comic Sans MS, cursive, sans-serif; text-align=right;">
+
+				</p>
+
+			</header>
+			<section class="se-container">
+
+				<div class="se-slope">
+					<article class="se-content">
+            <div style="font-size: 550%;font-family: verdana;">Insta Setup</div>
+						<p style="font-size: 550%;">i</p>
+					</article>
+				</div>
+				<div class="se-slope">
+					<article class="se-content">
+						<h3>Oh... what I'm gon' do?</h3>
+						<p>Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul. </p>
+					</article>
+				</div>
+				<div class="se-slope">
+					<article class="se-content">
+						<h3>We happy?</h3>
+						<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
+					</article>
+				</div>
+				<div class="se-slope">
+					<article class="se-content">
+						<h3>No man, I don't eat pork</h3>
+						<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
+					</article>
+				</div>
+				<div class="se-slope">
+					<article class="se-content">
+						<h3>Are you ready?</h3>
+						<p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. </p>
+					</article>
+				</div>
+				<div class="se-slope">
+					<article class="se-content">
+						<h3>Oh... what I'm gon' do?</h3>
+						<p>Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul. </p>
+					</article>
+				</div>
+				<div class="se-slope">
+
+          <div class="pricing pricing--yonten">
+              <div class="pricing__item">
+                  <div class="icon icon--bicycle"></div>
+                  <h3 class="pricing__title">Beginner</h3>
+                  <div class="pricing__price"><span class="pricing__currency">$</span>9<span class="pricing__period">/ month</span></div>
+                  <ul class="pricing__feature-list">
+                      <li class="pricing__feature">1 GB of space</li>
+                      <li class="pricing__feature">Unlimited traffic</li>
+                      <li class="pricing__feature">Forum access</li>
+                      <li class="pricing__feature">Support at $25/hour</li>
+                  </ul>
+                  <button class="pricing__action">Choose plan</button>
+              </div>
+              <div class="pricing__item">
+                  <div class="icon icon--bus"></div>
+                  <h3 class="pricing__title">Advanced</h3>
+                  <div class="pricing__price"><span class="pricing__currency">$</span>259<span class="pricing__period">/ year</span></div>
+                  <ul class="pricing__feature-list">
+                      <li class="pricing__feature">5 GB of space</li>
+                      <li class="pricing__feature">Unlimited traffic</li>
+                      <li class="pricing__feature">Forum access</li>
+                      <li class="pricing__feature">Support at $5/hour</li>
+                  </ul>
+                  <button class="pricing__action">Choose plan</button>
+              </div>
+              <div class="pricing__item">
+                  <div class="icon icon--train"></div>
+                  <h3 class="pricing__title">Professional</h3>
+                  <div class="pricing__price"><span class="pricing__currency">$</span>699<span class="pricing__period">/ year</span></div>
+                  <ul class="pricing__feature-list">
+                      <li class="pricing__feature">20 GB of space</li>
+                      <li class="pricing__feature">Unlimited traffic</li>
+                      <li class="pricing__feature">Forum access</li>
+                      <li class="pricing__feature">Free support</li>
+                  </ul>
+                  <button class="pricing__action">Choose plan</button>
+              </div>
+          </div>
+
+					<article class="se-content">
+						<h3>We happy?</h3>
+						<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
+					</article>
+				</div>
+				<div class="se-slope">
+					<article class="se-content">
+						<h3>No man, I don't eat pork</h3>
+						<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
+					</article>
+				</div>
+			</section>
+        </div>
+
+
+        <script src="js/classie.js"></script>
+        <script src="js/clipboard.min.js"></script>
+        <script>
+        (function() {
+          [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+            var menuItems = menu.querySelectorAll('.menu__link'),
+              setCurrent = function(ev) {
+                ev.preventDefault();
+
+                var item = ev.target.parentNode; // li
+
+                // return if already current
+                if (classie.has(item, 'menu__item--current')) {
+                  return false;
+                }
+                // remove current
+                classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                // set current
+                classie.add(item, 'menu__item--current');
+              };
+
+            [].slice.call(menuItems).forEach(function(el) {
+              el.addEventListener('click', setCurrent);
+            });
+          });
+
+          [].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+            link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+            new Clipboard(link);
+            link.addEventListener('click', function() {
+              classie.add(link, 'link-copy--animate');
+              setTimeout(function() {
+                classie.remove(link, 'link-copy--animate');
+              }, 300);
+            });
+          });
+        })(window);
+        </script>
+    </body>
 </html>
