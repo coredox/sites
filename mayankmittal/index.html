@@ -1,512 +1,576 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-    <head>
-		<meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Insta Setup</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Get registration and chartered services for your business instantly" />
-        <meta name="keywords" content="inclined, skew, sloping, html5, slopy, css3, web design, elements, div, section, background, rotate, transform" />
-        <meta name="author" content="Corédox" />
-        <link rel="shortcut icon" href="../favicon.ico">
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <style>
-          .menu {
-          	line-height: 1;
-          	margin: 0 auto 3em;
-          }
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insta Setup</title>
+	<meta name="description" content="Some inspiration for web divider styles" />
+	<meta name="keywords" content="separator css, divider css, separator style, web design, flat design, inspiration, responsive, svg, pseudo-elements" />
+	<meta name="author" content="Coredox" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<!--pricing-->
+	<style>
+		.pricing {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-justify-content: center;
+			justify-content: center;
+			width: 100%;
+			margin: 0 auto 3em;
+		}
 
-          .menu__list {
-          	position: relative;
-          	display: -webkit-flex;
-          	display: flex;
-          	-webkit-flex-wrap: wrap;
-          	flex-wrap: wrap;
-          	margin: 0;
-          	padding: 0;
-          	list-style: none;
-          }
+		.pricing__item {
+			position: relative;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+			-webkit-align-items: stretch;
+			align-items: stretch;
+			text-align: center;
+			-webkit-flex: 0 1 330px;
+			flex: 0 1 330px;
+		}
 
-          .menu__item {
-          	display: block;
-          	margin: 1em 0;
-          }
+		.pricing__feature-list {
+			text-align: left;
+		}
 
-          .menu__link {
-          	font-size: 1.05em;
-          	font-weight: bold;
-          	display: block;
-          	padding: 1em;
-          	cursor: pointer;
-          	-webkit-user-select: none;
-          	-moz-user-select: none;
-          	-ms-user-select: none;
-          	user-select: none;
-          	-webkit-touch-callout: none;
-          	-khtml-user-select: none;
-          	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-          }
+		.pricing__action {
+			color: inherit;
+			border: none;
+			background: none;
+		}
 
-          .menu__link:hover,
-          .menu__link:focus {
-          	outline: none;
-          }
-          .menu--sebastian .menu__link {
-          	position: relative;
-          	display: block;
-          	margin: 0 1em;
-          	text-align: center;
-          	color: #929292;
-          	-webkit-transition: color 0.4s;
-          	transition: color 0.4s;
-          }
+		.pricing__action:focus {
+			outline: none;
+		}
+		.pricing--yonten .pricing__item {
+			font-family: 'PT Sans', sans-serif;
+			padding: 2em 4em;
+			cursor: default;
+			color: #fff;
+			margin: 1em;
+			border: 1px solid #5c6552;
+			max-width: 320px;
+		}
 
-          .menu--sebastian .menu__link:hover,
-          .menu--sebastian .menu__link:focus {
-          	color: #fff;
-          }
+		@media screen and (min-width: 66.250em) {
+			.pricing--yonten .pricing__item {
+				margin: 0;
+			}
+			.pricing--yonten .pricing__item:nth-child(2) {
+				border-right: none;
+				border-left: none;
+			}
+		}
 
-          .menu--sebastian .menu__item--current .menu__link {
-          	color: #d94f5c;
-          }
+		.pricing--yonten .pricing__item:hover {
+			z-index: 100;
+		}
 
-          .menu--sebastian .menu__link::before,
-          .menu--sebastian .menu__link::after {
-          	content: '';
-          	position: absolute;
-          	left: 0;
-          	width: 100%;
-          	height: 2px;
-          	background: #d94f5c;
-          	-webkit-transform: scale3d(0, 1, 1);
-          	transform: scale3d(0, 1, 1);
-          	-webkit-transition: -webkit-transform 0.2s;
-          	transition: transform 0.2s;
-          }
+		.pricing--yonten .pricing__item:hover::after {
+			content: '';
+			pointer-events: none;
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			width: 100%;
+			height: 100%;
+			box-sizing: content-box;
+			border: 5px solid #8bc34a;
+		}
 
-          .menu--sebastian .menu__link::before {
-          	top: 0;
-          	-webkit-transform-origin: 0 50%;
-          	transform-origin: 0 50%;
-          }
+		.pricing--yonten .pricing__title {
+			font-size: 1.5em;
+			margin: 0 0 0.5em 0;
+			padding: 0 0 0.5em;
+		}
 
-          .menu--sebastian .menu__link::after {
-          	bottom: 0;
-          	-webkit-transform-origin: 100% 50%;
-          	transform-origin: 100% 50%;
-          }
+		.pricing--yonten .icon {
+			font-size: 3em;
+			margin: 0 0 0.5em 0;
+			color: #85c34a;
+		}
 
-          .menu--sebastian .menu__item--current .menu__link::before,
-          .menu--sebastian .menu__item--current .menu__link::after {
-          	-webkit-transform: scale3d(1, 1, 1);
-          	transform: scale3d(1, 1, 1);
-          	-webkit-transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
-          	transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
-          	-webkit-transition-duration: 0.4s;
-          	transition-duration: 0.4s;
-          }
-          @media screen and (max-width:55em) {
-          	.menu__list {
-          		display: block;
-          		margin: 0 auto;
-          	}
-          }
-        </style>
-        <style>
-          .pricing {
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-justify-content: center;
-            justify-content: center;
-            width: 100%;
-            margin: 0 auto 3em;
-          }
+		.pricing--yonten .pricing__price {
+			font-size: 2em;
+			margin: 0 0 0.5em 0;
+			font-weight: bold;
+			color: #85c34a;
+		}
 
-          .pricing__item {
-            position: relative;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-direction: column;
-            flex-direction: column;
-            -webkit-align-items: stretch;
-            align-items: stretch;
-            text-align: center;
-            -webkit-flex: 0 1 330px;
-            flex: 0 1 330px;
-          }
+		.pricing--yonten .pricing__currency {
+			font-size: 0.5em;
+			vertical-align: super;
+		}
 
-          .pricing__feature-list {
-            text-align: left;
-          }
+		.pricing--yonten .pricing__period {
+			font-size: 0.35em;
+			padding: 0 0 0 0.5em;
+			color: #646D5B;
+		}
 
-          .pricing__action {
-            color: inherit;
-            border: none;
-            background: none;
-          }
+		.pricing--yonten .pricing__feature-list {
+			margin: 0;
+			padding: 0.25em 0 8em;
+			list-style: none;
+			text-align: center;
+			color: #81867D;
+		}
 
-          .pricing__action:focus {
-            outline: none;
-          }
+		.pricing--yonten .pricing__feature {
+			padding: 0.25em;
+		}
 
-          .pricing--yonten .pricing__item {
-          	font-family: 'PT Sans', sans-serif;
-          	padding: 2em 4em;
-          	cursor: default;
-          	color: #fff;
-          	margin: 1em;
-          	border: 1px solid #5c6552;
-          	max-width: 320px;
-          }
+		.pricing--yonten .pricing__action {
+			font-weight: bold;
+			margin-top: auto;
+			padding: 1em 2em;
+			border-radius: 40px;
+			background: #85c34a;
+			color: ;
+			-webkit-transition: background-color 0.3s, color 0.3s;
+			transition: background-color 0.3s, color 0.3s;
+		}
 
-          @media screen and (min-width: 66.250em) {
-          	.pricing--yonten .pricing__item {
-          		margin: 0;
-          	}
-          	.pricing--yonten .pricing__item:nth-child(2) {
-          		border-right: none;
-          		border-left: none;
-          	}
-          }
-
-          .pricing--yonten .pricing__item:hover {
-          	z-index: 100;
-          }
-
-          .pricing--yonten .pricing__item:hover::after {
-          	content: '';
-          	pointer-events: none;
-          	position: absolute;
-          	top: -5px;
-          	left: -5px;
-          	width: 100%;
-          	height: 100%;
-          	box-sizing: content-box;
-          	border: 5px solid #8bc34a;
-          }
-
-          .pricing--yonten .pricing__title {
-          	font-size: 1.5em;
-          	margin: 0 0 0.5em 0;
-          	padding: 0 0 0.5em;
-          }
-
-          .pricing--yonten .icon {
-          	font-size: 3em;
-          	margin: 0 0 0.5em 0;
-          	color: #85c34a;
-          }
-
-          .pricing--yonten .pricing__price {
-          	font-size: 2em;
-          	margin: 0 0 0.5em 0;
-          	font-weight: bold;
-          	color: #85c34a;
-          }
-
-          .pricing--yonten .pricing__currency {
-          	font-size: 0.5em;
-          	vertical-align: super;
-          }
-
-          .pricing--yonten .pricing__period {
-          	font-size: 0.35em;
-          	padding: 0 0 0 0.5em;
-          	color: #646D5B;
-          }
-
-          .pricing--yonten .pricing__feature-list {
-          	margin: 0;
-          	padding: 0.25em 0 8em;
-          	list-style: none;
-          	text-align: center;
-          	color: #81867D;
-          }
-
-          .pricing--yonten .pricing__feature {
-          	padding: 0.25em;
-          }
-
-          .pricing--yonten .pricing__action {
-          	font-weight: bold;
-          	margin-top: auto;
-          	padding: 1em 2em;
-          	border-radius: 40px;
-          	background: #85c34a;
-          	color: ;
-          	-webkit-transition: background-color 0.3s, color 0.3s;
-          	transition: background-color 0.3s, color 0.3s;
-          }
-
-          .pricing--yonten .pricing__action:hover,
-          .pricing--yonten .pricing__action:focus {
-          	color: #85c34a;
-          	background: #fff;
-          }
-
-          /* tashi */
-          .pricing--tashi .pricing__item {
-          	font-family: 'Roboto Condensed', sans-serif;
-          	margin: 0.5em;
-          	padding: 2em 2.5em;
-          	text-align: left;
-          	color: #fff;
-          	background: #262c37;
-          }
-
-          .pricing--tashi .pricing__title {
-          	font-size: 2em;
-          	font-weight: 300;
-          	margin: 0 0 0.15em;
-          	color: #E25A77;
-          }
-
-          .pricing--tashi .pricing__item:nth-child(2) .pricing__title {
-          	color: #E25ABC;
-          }
-
-          .pricing--tashi .pricing__item:nth-child(3) .pricing__title {
-          	color: #7E5AE2;
-          }
-
-          .pricing--tashi .pricing__price {
-          	font-size: 3em;
-          	font-weight: 300;
-          	padding: 0.85em 0;
-          }
-
-          .pricing--tashi .pricing__currency {
-          	font-size: 0.65em;
-          	vertical-align: super;
-          	color: #394150;
-          }
-
-          .pricing--tashi .pricing__period {
-          	font-size: 0.35em;
-          	padding: 0 0 0 0.5em;
-          	color: #535965;
-          }
-
-          .pricing--tashi .pricing__sentence {
-          	padding: 0 0 0.5em;
-          	margin: 0;
-          	color: #535965;
-          }
-
-          .pricing--tashi .pricing__feature-list {
-          	font-size: 0.95em;
-          	margin: 0;
-          	padding: 0 0 2.5em;
-          	list-style: none;
-          	color: #757983;
-          }
-
-          .pricing--tashi .pricing__feature {
-          	position: relative;
-          	display: block;
-          	padding: 0 0 0 20px;
-          	line-height: 1.5;
-          }
-
-          .pricing--tashi .pricing__feature::before {
-          	content: '';
-          	position: absolute;
-          	width: 10px;
-          	height: 2px;
-          	background: #1F242D;
-          	left: 0;
-          	top: 50%;
-          	margin: -2px 0 0 0;
-          }
-
-          .pricing--tashi .pricing__action {
-          	-webkit-align-self: flex-end;
-          	align-self: flex-end;
-          	margin-top: auto;
-          	font-size: 1.55em;
-          	width: 60px;
-          	height: 60px;
-          	line-height: 60px;
-          	color: #fff;
-          	border-radius: 30px;
-          	background: #E25A77;
-          	-webkit-transition: background-color 0.3s, color 0.3s;
-          	transition: background-color 0.3s, color 0.3s;
-          }
-
-          .pricing--tashi .pricing__item:nth-child(2) .pricing__action {
-          	background: #E25ABC;
-          }
-
-          .pricing--tashi .pricing__item:nth-child(3) .pricing__action {
-          	background: #7E5AE2;
-          }
-
-          .pricing--tashi .pricing__action:hover,
-          .pricing--tashi .pricing__action:focus {
-          	background: #1A1F28 !important;
-          }</style>
-		<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css' />
-		<script src="js/modernizr.custom.34978.js"></script>
-    </head>
-    <body>
-        <div class="container">
-			<header>
-        <h1 style="font-family:Comic Sans MS, cursive, sans-serif;">Insta Setup</h1>
-
-        <nav class="menu menu--sebastian">
-          <ul class="menu__list">
-            <li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Registrations</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Chartered Services</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Support</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
-          </ul>
-        </nav>
-
-				<p class="codrops-demos" style="font-size: 400%; font-family:Comic Sans MS, cursive, sans-serif; text-align=right;">
-
-				</p>
-
+		.pricing--yonten .pricing__action:hover,
+		.pricing--yonten .pricing__action:focus {
+			color: #85c34a;
+			background: #fff;
+			}</style>
+		<link href='http://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'>
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body style="font-family: 'Snippet', sans-serif;">
+		<div class="container">
+			<!-- the header that will be animated by adding the respective state class to it -->
+			<header id="ha-header" class="ha-header ha-header-large" style="font-family: 'Snippet', sans-serif;">
+				<div class="ha-header-perspective">
+					<div class="ha-header-front">
+						<h1><span>Insta Setup</span></h1>
+						<nav>
+							<a href="http://tympanus.net/Development/AnimatedBooks/">Home</a>
+							<a href="http://tympanus.net/codrops/?p=15935">Registrations</a>
+							<a>Chartered Services</a>
+							<a href="http://tympanus.net/codrops/?p=15935">Contact</a>
+						</nav>
+					</div>
+					<div class="ha-header-bottom">
+						<nav>
+							<a>Dalliance</a>
+							<a>Inglenook</a>
+							<a>Lagniappe</a>
+							<a>Mellifluous</a>
+							<a>Erstwhile</a>
+							<a>Wafture</a>
+							<a>Serendipity</a>
+							<a>Love</a>
+						</nav>
+					</div>
+				</div>
 			</header>
-			<section class="se-container">
+			<!-- Top Navigation -->
+			<div class="ha-waypoint" data-animate-down="ha-header-hide" data-animate-up="ha-header-hide">
+			<section class="color ss-style-bigtriangle">
+				<h1 style="font-size:550%;">Insta Setup</h1>
+				<p>REGISTER COMPANY + REGISTER TRADEMARK + CA SERVICES IN INDIA</p>
+			</section>
+			<svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+				<path d="M0 0 L50 100 L100 0 Z" />
+			</svg>
+		</div>
 
-				<div class="se-slope">
-					<article class="se-content">
-            <div style="font-size: 550%;font-family: verdana;">Insta Setup</div>
-						<p style="font-size: 550%;">i</p>
-					</article>
-				</div>
-				<div class="se-slope">
-					<article class="se-content">
-						<h3>Oh... what I'm gon' do?</h3>
-						<p>Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul. </p>
-					</article>
-				</div>
-				<div class="se-slope">
-					<article class="se-content">
-						<h3>We happy?</h3>
-						<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
-					</article>
-				</div>
-				<div class="se-slope">
-					<article class="se-content">
-						<h3>No man, I don't eat pork</h3>
-						<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
-					</article>
-				</div>
-				<div class="se-slope">
-					<article class="se-content">
-						<h3>Are you ready?</h3>
-						<p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. </p>
-					</article>
-				</div>
-				<div class="se-slope">
-					<article class="se-content">
-						<h3>Oh... what I'm gon' do?</h3>
-						<p>Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul. </p>
-					</article>
-				</div>
-				<div class="se-slope">
-
-          <div class="pricing pricing--yonten">
-              <div class="pricing__item">
-                  <div class="icon icon--bicycle"></div>
-                  <h3 class="pricing__title">Beginner</h3>
-                  <div class="pricing__price"><span class="pricing__currency">$</span>9<span class="pricing__period">/ month</span></div>
-                  <ul class="pricing__feature-list">
-                      <li class="pricing__feature">1 GB of space</li>
-                      <li class="pricing__feature">Unlimited traffic</li>
-                      <li class="pricing__feature">Forum access</li>
-                      <li class="pricing__feature">Support at $25/hour</li>
-                  </ul>
-                  <button class="pricing__action">Choose plan</button>
-              </div>
-              <div class="pricing__item">
-                  <div class="icon icon--bus"></div>
-                  <h3 class="pricing__title">Advanced</h3>
-                  <div class="pricing__price"><span class="pricing__currency">$</span>259<span class="pricing__period">/ year</span></div>
-                  <ul class="pricing__feature-list">
-                      <li class="pricing__feature">5 GB of space</li>
-                      <li class="pricing__feature">Unlimited traffic</li>
-                      <li class="pricing__feature">Forum access</li>
-                      <li class="pricing__feature">Support at $5/hour</li>
-                  </ul>
-                  <button class="pricing__action">Choose plan</button>
-              </div>
-              <div class="pricing__item">
-                  <div class="icon icon--train"></div>
-                  <h3 class="pricing__title">Professional</h3>
-                  <div class="pricing__price"><span class="pricing__currency">$</span>699<span class="pricing__period">/ year</span></div>
-                  <ul class="pricing__feature-list">
-                      <li class="pricing__feature">20 GB of space</li>
-                      <li class="pricing__feature">Unlimited traffic</li>
-                      <li class="pricing__feature">Forum access</li>
-                      <li class="pricing__feature">Free support</li>
-                  </ul>
-                  <button class="pricing__action">Choose plan</button>
-              </div>
-          </div>
-
-					<article class="se-content">
-						<h3>We happy?</h3>
-						<p>Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
-					</article>
-				</div>
-				<div class="se-slope">
-					<article class="se-content">
-						<h3>No man, I don't eat pork</h3>
-						<p>Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
-					</article>
+			<section class="col-2">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<div class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-hide">
+			<section class="color"></section>
+			<section class="ss-style-multitriangles" style="background-color:rgb(242,232,220);">
+				<h2 class="pricing-section__title">Pricing</h2>
+				<div class="pricing pricing--yonten">
+					<div class="pricing__item">
+							<h3 class="pricing__title">OPC</h3>
+							<div class="pricing__price"><span class="pricing__currency">₹</span>###<span class="pricing__period">INCLUSIVE OF TAXES</span></div>
+							<ul class="pricing__feature-list">
+									<li class="pricing__feature">One Person Company</li>
+									<li class="pricing__feature">For startups</li>
+									<li class="pricing__feature">with 1 founder</li>
+							</ul>
+					</div>
+					<div class="pricing__item">
+							<h3 class="pricing__title">PVT. LTD</h3>
+							<div class="pricing__price"><span class="pricing__currency">₹</span>####<span class="pricing__period">INCLUSIVE OF TAXES</span></div>
+							<ul class="pricing__feature-list">
+									<li class="pricing__feature">Private Limited</li>
+									<li class="pricing__feature">For Startups who</li>
+									<li class="pricing__feature">plans to raise fund</li>
+									<li class="pricing__feature"><button class="pricing__action">Choose plan</button></li>
+							</ul>
+					</div>
+					<div class="pricing__item">
+							<h3 class="pricing__title">LLP</h3>
+							<div class="pricing__price"><span class="pricing__currency">₹</span>####<span class="pricing__period">INCLUSIVE OF TAXES</span></div>
+							<ul class="pricing__feature-list">
+									<li class="pricing__feature">Limited Liability</li>
+									<li class="pricing__feature">Partnership</li>
+									<li class="pricing__feature">For businesses</li>
+									<li class="pricing__feature">with partners</li>
+							</ul>
+					</div>
 				</div>
 			</section>
-        </div>
+			<section class="color"></section>
+			<section class="col-2 ss-style-triangles">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-headphones"></span>
+				</div>
+			</section>
+			<section class="col-3 ss-style-doublediagonal">
+				<div class="column">
+					<span class="icon icon-home"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-bullhorn"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-blog"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2 ss-style-halfcircle">
+				<div class="column">
+					<span class="icon icon-images"></span>
+				</div>
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+			</section>
 
 
-        <script src="js/classie.js"></script>
-        <script src="js/clipboard.min.js"></script>
-        <script>
-        (function() {
-          [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
-            var menuItems = menu.querySelectorAll('.menu__link'),
-              setCurrent = function(ev) {
-                ev.preventDefault();
+			<section class="col-3">
+				<div class="column">
+					<span class="icon icon-camera"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-headphones"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-podcast"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<svg id="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0 100 C 20 0 50 0 100 100 Z"/>
+			</svg>
+			<section class="col-2 color ss-style-curvedown">
+				<div class="column">
+					<span class="icon icon-library"></span>
+				</div>
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+			</section>
+			<svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0 0 C 50 100 80 100 100 0 Z"/>
+			</svg>
 
-                var item = ev.target.parentNode; // li
+			<section class="col-2 color ss-style-multitriangles">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-stack"></span>
+				</div>
+			</section>
+			<section class="col-2">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="col-2 color ss-style-roundedsplit">
+				<div class="column">
+					<span class="icon icon-location"></span>
+				</div>
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+			</section>
+			<section class="col-3 ss-style-invertedrounded">
+				<div class="column">
+					<span class="icon icon-compass"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-alarm"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-screen"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2 color ss-style-boxes">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-bullhorn"></span>
+				</div>
+			</section>
+			<section>
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="col-3 color ss-style-zigzag">
+				<div class="column">
+					<span class="icon icon-mobile"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-drawer"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-download"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-upload"></span>
+				</div>
+			</section>
+			<section class="color ss-style-roundedges">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="col-3 ss-style-slit">
+				<div class="column">
+					<span class="icon icon-laptop"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-library"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-office"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<svg id="bigHalfCircle" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0 100 C40 0 60 0 100 100 Z"/>
+			</svg>
+			<section class="col-2 color">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-blog"></span>
+				</div>
+			</section>
+			<svg id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path id="trianglePath1" d="M0 0 L50 100 L100 0 Z" />
+				<path id="trianglePath2" d="M50 100 L100 40 L100 0 Z" />
+			</svg>
+			<section>
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="color col-3 ss-style-inczigzag">
+				<div class="column">
+					<span class="icon icon-images"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-camera"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-headphones"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-compass"></span>
+				</div>
+			</section>
+			<section class="color ss-style-castle">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<svg id="slit" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path id="slitPath2" d="M50 100 C49 80 47 0 40 0 L47 0 Z" />
+				<path id="slitPath3" d="M50 100 C51 80 53 0 60 0 L53 0 Z" />
+				<path id="slitPath1" d="M47 0 L50 100 L53 0 Z" />
+			</svg>
+			<section class="col-3 ss-style-foldedcorner">
+				<div class="column">
+					<span class="icon icon-camera"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-location"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-alarm"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="color col-3 ss-style-dots">
+				<div class="column">
+					<span class="icon icon-library"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-mobile"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-images"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<section class="col-2 color ss-style-doubleline">
+				<div class="column text">
+					<h2>Objectively innovate empowered manufactured products</h2>
+					<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-home"></span>
+				</div>
+			</section>
+			<section class="color ss-style-cross">
+				<h2>Engage worldwide methodologies </h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+			</section>
+			<section class="color col-3">
+				<div class="column">
+					<span class="icon icon-screen"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-podcast"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+				<div class="column">
+					<span class="icon icon-drawer"></span>
+					<p>Take root and flourish. Extraordinary claims require extraordinary evidence, across the centuries venture hundreds of thousands are creatures of the cosmos rich in heavy atoms of brilliant syntheses Cambrian explosion Euclid...</p>
+				</div>
+			</section>
+			<svg id="stamp" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+				<path d="M0 0 Q 2.5 40 5 0
+				Q 7.5 40 10 0
+				Q 12.5 40 15 0
+				Q 17.5 40 20 0
+				Q 22.5 40 25 0
+				Q 27.5 40 30 0
+				Q 32.5 40 35 0
+				Q 37.5 40 40 0
+				Q 42.5 40 45 0
+				Q 47.5 40 50 0
+				Q 52.5 40 55 0
+				Q 57.5 40 60 0
+				Q 62.5 40 65 0
+				Q 67.5 40 70 0
+				Q 72.5 40 75 0
+				Q 77.5 40 80 0
+				Q 82.5 40 85 0
+				Q 87.5 40 90 0
+				Q 92.5 40 95 0
+				Q 97.5 40 100 0 Z">
+			</path>
+		</svg>
+		<section class="col-2">
+			<div class="column text">
+				<h2>Objectively innovate empowered manufactured products</h2>
+				<p>Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+			</div>
+			<div class="column">
+				<span class="icon icon-home"></span>
+			</div>
+		</section>
+		<svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+			<path d="M-5 100 Q 0 20 5 100 Z
+			M0 100 Q 5 0 10 100
+			M5 100 Q 10 30 15 100
+			M10 100 Q 15 10 20 100
+			M15 100 Q 20 30 25 100
+			M20 100 Q 25 -10 30 100
+			M25 100 Q 30 10 35 100
+			M30 100 Q 35 30 40 100
+			M35 100 Q 40 10 45 100
+			M40 100 Q 45 50 50 100
+			M45 100 Q 50 20 55 100
+			M50 100 Q 55 40 60 100
+			M55 100 Q 60 60 65 100
+			M60 100 Q 65 50 70 100
+			M65 100 Q 70 20 75 100
+			M70 100 Q 75 45 80 100
+			M75 100 Q 80 30 85 100
+			M80 100 Q 85 20 90 100
+			M85 100 Q 90 50 95 100
+			M90 100 Q 95 25 100 100
+			M95 100 Q 100 15 105 100 Z">
+		</path>
+	</svg>
+	<section class="related">
+		<p>If you enjoyed these styles you might also like:</p>
+		<p><a href="http://tympanus.net/Development/CreativeLinkEffects/">Creative Link Effects</a></p>
+		<p><a href="http://tympanus.net/Tutorials/CaptionHoverEffects/">Caption Hover Effects</a></p>
+	</section>
+</div>
+</div><!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script>
+	var $head = $( '#ha-header' );
+	$( '.ha-waypoint' ).each( function(i) {
+		var $el = $( this ),
+			animClassDown = $el.data( 'animateDown' ),
+			animClassUp = $el.data( 'animateUp' );
 
-                // return if already current
-                if (classie.has(item, 'menu__item--current')) {
-                  return false;
-                }
-                // remove current
-                classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
-                // set current
-                classie.add(item, 'menu__item--current');
-              };
-
-            [].slice.call(menuItems).forEach(function(el) {
-              el.addEventListener('click', setCurrent);
-            });
-          });
-
-          [].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
-            link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
-            new Clipboard(link);
-            link.addEventListener('click', function() {
-              classie.add(link, 'link-copy--animate');
-              setTimeout(function() {
-                classie.remove(link, 'link-copy--animate');
-              }, 300);
-            });
-          });
-        })(window);
-        </script>
-    </body>
+		$el.waypoint( function( direction ) {
+			if( direction === 'down' && animClassDown ) {
+				$head.attr('class', 'ha-header ' + animClassDown);
+			}
+			else if( direction === 'up' && animClassUp ){
+				$head.attr('class', 'ha-header ' + animClassUp);
+			}
+		}, { offset: '100%' } );
+	} );
+</script>
+</body>
 </html>
